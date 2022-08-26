@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotpassComponent } from './forgotpass/forgotpass.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ForgotpassComponent } from './forgotpass/forgotpass.component';
     HomeComponent,
     NavbarComponent,
     SignupComponent,
-    ForgotpassComponent
+    ForgotpassComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
