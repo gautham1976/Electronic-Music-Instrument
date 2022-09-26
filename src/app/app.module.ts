@@ -15,6 +15,10 @@ import { GuitarComponent } from './guitar/guitar.component';
 import { BongoComponent } from './bongo/bongo.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { AdminaddComponent } from './adminadd/adminadd.component';
+import { UserhomeComponent } from './userhome/userhome.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,11 @@ import { ContactComponent } from './contact/contact.component';
     GuitarComponent,
     BongoComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AdminComponent,
+    AdminhomeComponent,
+    AdminaddComponent,
+    UserhomeComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,11 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { KeyboardComponent } from './keyboard/keyboard.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminaddComponent } from './adminadd/adminadd.component';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+
 
 
 const routes: Routes = [{path:'signup',component:SignupComponent},
@@ -16,7 +21,11 @@ const routes: Routes = [{path:'signup',component:SignupComponent},
  {path:'login',component:LoginComponent},
 {path:'about',component:AboutComponent},
 {path:'contact',component:ContactComponent},
-{path:'keyboard',component:KeyboardComponent}];
+{path:'keyboard',component:KeyboardComponent},
+{path:'admin',component:AdminComponent},
+{path:'adminadd',component:AdminaddComponent},
+{path:'userhome',component:UserhomeComponent},
+{path:'adminhome',component:AdminhomeComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
