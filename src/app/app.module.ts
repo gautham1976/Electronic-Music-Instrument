@@ -19,6 +19,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { AdminaddComponent } from './adminadd/adminadd.component';
 import { UserhomeComponent } from './userhome/userhome.component';
+import { AdminuserlistComponent } from './adminuserlist/adminuserlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { UserhomeComponent } from './userhome/userhome.component';
     AdminComponent,
     AdminhomeComponent,
     AdminaddComponent,
-    UserhomeComponent
+    UserhomeComponent,
+    AdminuserlistComponent
   ],
   imports: [
     BrowserModule,

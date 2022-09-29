@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AdminaddComponent } from './adminadd/adminadd.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 
@@ -14,12 +15,12 @@ Signupdata(data:any) {
   return this.http.post<any>('http://localhost:3000/signup',SignupComponent)
 }
 
-iadddata(iadddata:any){
-  return this.http.post<any>('http://localhost:3000/iadddata',UserhomeComponent)
+Iadddata(iadddata:any){
+  return this.http.post<any>('http://localhost:3000/adminadd',AdminaddComponent)
 }
 
 instdetail=()=>
 {
-  return this.http.get('http://localhost:3000/instdetail')
+  return this.http.get('http://localhost:3000/userhome')
 }
 }

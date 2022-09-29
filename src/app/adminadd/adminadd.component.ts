@@ -7,7 +7,7 @@ import { MusicService } from '../music.service';
   styleUrls: ['./adminadd.component.css']
 })
 export class AdminaddComponent implements OnInit {
-      iadddata={
+      idata={
         iaddname:"",
         iadddetails:"",
         iaddref:""
@@ -17,9 +17,9 @@ export class AdminaddComponent implements OnInit {
 
       ngOnInit(): void {
       }
-      adddata()
+      iadddata()
       {
-        this.api.iadddata(this.adddata).subscribe((data)=>{
+        this.api.Iadddata(this.idata).subscribe((data)=>{
     
         })
         alert("success");
