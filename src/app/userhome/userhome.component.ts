@@ -10,13 +10,13 @@ export class UserhomeComponent implements OnInit {
 
   constructor(private api:MusicService) { 
     api.instdetail().subscribe((response=>{
-      this.data=response
+      this.data2=response
     }))
   }
 
   ngOnInit(): void {
   }
-  data:any=[]
+  data2:any=[]
   
 
 }

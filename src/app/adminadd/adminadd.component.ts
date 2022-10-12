@@ -7,7 +7,7 @@ import { MusicService } from '../music.service';
   styleUrls: ['./adminadd.component.css']
 })
 export class AdminaddComponent implements OnInit {
-      idata={
+      dataa={
         iaddname:"",
         iadddetails:"",
         iaddref:""
@@ -19,7 +19,7 @@ export class AdminaddComponent implements OnInit {
       }
       iadddata()
       {
-        this.api.Iadddata(this.idata).subscribe((data)=>{
+        this.api.Iadddata(this.dataa).subscribe((data)=>{
     
         })
         alert("success");

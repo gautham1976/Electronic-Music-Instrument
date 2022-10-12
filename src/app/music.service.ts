@@ -12,15 +12,15 @@ export class MusicService {
   constructor(private http:HttpClient) { }
 Signupdata(data:any) {
 
-  return this.http.post<any>('http://localhost:3000/signup',SignupComponent)
+  return this.http.post<any>('http://localhost:3000/signup',data)
 }
 
-Iadddata(iadddata:any){
-  return this.http.post<any>('http://localhost:3000/adminadd',AdminaddComponent)
+Iadddata(dataa:any){
+  return this.http.post<any>('http://localhost:3000/adminadd',dataa)
 }
 
 instdetail=()=>
 {
-  return this.http.get('http://localhost:3000/userhome')
+  return this.http.get('http://localhost:3000/instdetail')
 }
 }
