@@ -23,4 +23,8 @@ instdetail=()=>
 {
   return this.http.get('http://localhost:3000/instdetail')
 }
+
+dlogin(data3:any){
+  return this.http.post<any>('http://localhost:3200/dlogin',data3)
+}
 }
