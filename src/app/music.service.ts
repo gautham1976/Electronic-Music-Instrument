@@ -25,6 +25,9 @@ instdetail=()=>
 }
 
 dlogin(data3:any){
-  return this.http.post<any>('http://localhost:3200/dlogin',data3)
+  return this.http.post<any>('http://localhost:3000/login',data3)
+}
+view=()=>{
+  return this.http.get('http://localhost:3000/adminuserlist')
 }
 }

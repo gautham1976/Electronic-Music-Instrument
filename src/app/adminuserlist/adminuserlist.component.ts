@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicService } from '../music.service';
+
 
 @Component({
   selector: 'app-adminuserlist',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminuserlistComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api:MusicService) { 
+    api.view().subscribe(
+      (Response)=>{
+        this.data=Response
+      }
+    )
+  }
 
   ngOnInit(): void {
   }
+  data:any=[
+    
+  ]
 
 }

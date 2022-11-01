@@ -20,11 +20,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   Dlogin() {
-    this.api.dlogin(this.signdata).subscribe((data) => {
-      if (data.success === true) {
+    console.log(this.signdata)
+    this.api.dlogin(this.signdata).subscribe((signdata) => {
+      console.log(signdata)
+      if (signdata.success === true) {
         this.router.navigate(['/userhome'])
       } else {
-        alert(data.success)
+        alert(signdata.success)
       }
     })
   }

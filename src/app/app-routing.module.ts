@@ -11,6 +11,8 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminaddComponent } from './adminadd/adminadd.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { AdminuserlistComponent } from './adminuserlist/adminuserlist.component';
+import { BongoComponent } from './bongo/bongo.component';
 
 
 
@@ -25,7 +27,9 @@ const routes: Routes = [{path:'signup',component:SignupComponent},
 {path:'admin',component:AdminComponent},
 {path:'adminadd',component:AdminaddComponent},
 {path:'userhome',component:UserhomeComponent},
-{path:'adminhome',component:AdminhomeComponent}];
+{path:'adminhome',component:AdminhomeComponent},
+{path:'adminuserlist',component:AdminuserlistComponent},
+{path:'bongo',component:BongoComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
