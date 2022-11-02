@@ -5,14 +5,20 @@
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <h1 align="center" style="font-family: 'Brush Script MT', cursive; font-size: 60px; color:rgb(255, 255, 255)">Admin Login</h1>
             <div class="row g-3">
-                <form #adminlogin="ngForm" (ngSubmit)="Enterdetails()">
+                <form class="row g-3 needs-validation" novalidate #adminlogin="ngForm" (ngSubmit)="adminlogin.valid && Enterdetails()">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col xxl-12">
                     <label for="" class="form-label" style="color:white ;"><b> Admin Username: </b></label>
-                <input type="text" class="form-control" style="max-width: 566px" [(ngModel)]="admin.name" name="name">
+                <input type="text" class="form-control" style="max-width: 566px" [(ngModel)]="admin.name" name="name" required>
+                <div class="invalid-feedback">
+                    Please provide a valid Username !
+                  </div>
             </div>
             <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col xxl-12">
                 <label for="" class="form-label" style="color:white ;"><b> Admin Password: </b></label>
-            <input type="password" class="form-control" style="max-width: 566px ;" [(ngModel)]="admin.password" name="password">
+            <input type="password" class="form-control" style="max-width: 566px ;" [(ngModel)]="admin.password" name="password" required>
+            <div class="invalid-feedback">
+                Please provide a valid Password !
+              </div>
         </div>
                 <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col xxl-4">
                     <a href="/adminhome"><button class="btn btn-dark">Login</button></a>

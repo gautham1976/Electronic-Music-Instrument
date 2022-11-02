@@ -1,29 +1,38 @@
 <br><h1 align="center" style="color:white ;"><b>Sign Up</b></h1>
 <div class="container">
+    <p><strong><i>Please provide the following details to sign up!</i></strong></p><br>
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
-                <form #formnew="ngForm" (ngSubmit)="signupdata()">
+                <form class="row g-3 needs validation" #formnew="ngForm" (ngSubmit)="formnew.valid && signupdata()">
 
                 <div class="col col col-12 col-sm-12 col-md-12 col-lg-12 col xl-12 col-xxl-12">
                     <label for="" class="form-label" style="color:white ;"><b>Username:</b></label>
-                    <input type="text" class="form-control" [(ngModel)]="signdata.signusername" name="Username" style="max-width: 500px;">
+                    <input type="text" class="form-control" [(ngModel)]="signdata.signusername" name="Username" style="max-width: 500px;" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Username !
+                      </div>
                 </div>
                 <div class="col col col-12 col-sm-12 col-md-12 col-lg-12 col xl-12 col-xxl-12">
-                    <label for="" class="form-label" style="color:white ;"><b>E-mail:</b></label>
-                    <input type="text" class="form-control" [(ngModel)]="signdata.signemail" name="E-mail" style="max-width: 500px;">
+                    <label for="" class="form-label" style="color:rgb(2, 133, 255) ;"><b>E-mail:</b></label>
+                    <input type="email" class="form-control" [(ngModel)]="signdata.signemail" name="E-mail" style="max-width: 500px;" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid E-mail !
+                      </div>
                 </div>
                 <div class="col col col-12 col-sm-12 col-md-12 col-lg-12 col xl-12 col-xxl-12">
                     <label for="" class="form-label" style="color:white ;"><b>Phone:</b></label>
-                    <input type="text" class="form-control" [(ngModel)]="signdata.signphone" name="Phone" style="max-width: 500px;">
+                    <input type="text" class="form-control" [(ngModel)]="signdata.signphone" name="Phone" style="max-width: 500px;" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid Phone Number !
+                      </div>
                 </div>
                 <div class="col col col-12 col-sm-12 col-md-12 col-lg-12 col xl-12 col-xxl-12">
                     <label for="" class="form-label" style="color:white ;"><b>Password:</b></label>
-                    <input type="password" class="form-control" [(ngModel)]="signdata.signpassword" name="Password" style="max-width: 500px;">
-                </div>
-                <div class="col col col-12 col-sm-12 col-md-12 col-lg-12 col xl-12 col-xxl-12">
-                    <label for="" class="form-label" style="color:white ;"><b>Confirm Password:</b></label>
-                    <input type="password" class="form-control" [(ngModel)]="signdata.signconfirmpass" name="Confirm" style="max-width: 500px;">
+                    <input type="password" class="form-control" [(ngModel)]="signdata.signpassword" name="Password" style="max-width: 500px;" required>
+                    <div class="invalid-feedback">
+                        Please provide a Password !
+                      </div>
                 </div>
                 <div class="col col col-12 col-sm-12 col-md-12 col-lg-12 col xl-12 col-xxl-12">
                    <br> <a href="/userhome"><button class="btn btn-primary" style="width:200px;color:white ;" ><b>Submit</b></button></a>

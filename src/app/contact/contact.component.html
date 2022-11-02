@@ -1,22 +1,21 @@
 <div class="container">
+    <h1 align="center" style="font-family: 'Brush Script MT', cursive; font-size: 60px; color:rgb(255, 255, 255)">Provide your feedback!</h1>
+<p><strong>Your feedback is very important to us. It helps us to provide a better user experience.<br> Tell us your opinion to improve our website.</strong></p>
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3">
+                <form class="row g-3 needs validation" #feed="ngForm" (ngSubmit)="feed.valid && feedbck()">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label" style="color:white ;">Username:</label>
-                    <input type="text" class="form-control" style="max-width: 500px;">
-                </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label" style="color:white ;">Email:</label>
-                    <input type="text" class="form-control" style="max-width: 500px;"><br><br>
-                </div>
-                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="" class="form-label" style="color:white ;"><b>Feedback:</b></label>
-                    <textarea name="" id="" cols="50" rows="3"></textarea>
+                    <label  for="" class="form-label" style="color:white ;"><b>Feedback:</b></label><br>
+                    <textarea name="" id="" cols="150" rows="10" [(ngModel)]="feedbackdata.message" name="Feedback" required></textarea>
+                    <div class="invalid-feedback">
+                        Please provide a valid Username !
+                      </div>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                 <button class="btn btn-primary">Submit</button>
                 </div>
+            </form>
             </div>
         </div>
     </div>

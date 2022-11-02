@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicService } from '../music.service';
 
 @Component({
   selector: 'app-forgotpass',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotpassComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api:MusicService) { 
+    api.view2().subscribe(
+      (Response)=>{
+        this.data4=Response
+      }
+    )
+  }
 
   ngOnInit(): void {
   }
+  data4:any=[
+    
+  ]
 
 }

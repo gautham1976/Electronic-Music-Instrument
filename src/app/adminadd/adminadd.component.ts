@@ -15,7 +15,21 @@ export class AdminaddComponent implements OnInit {
       }
       constructor(private api:MusicService) { }
 
-      ngOnInit(): void {
+      ngOnInit(): void {(() => {
+        'use strict'
+      
+        const forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms).forEach(form => {
+          form.addEventListener('submit',function(event:any){
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+      
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
       }
       iadddata()
       {

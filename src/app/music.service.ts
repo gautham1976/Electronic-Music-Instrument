@@ -30,4 +30,12 @@ dlogin(data3:any){
 view=()=>{
   return this.http.get('http://localhost:3000/adminuserlist')
 }
+
+Feedbck(feedbackdata:any){
+  return this.http.post<any>('http://localhost:3000/contact',feedbackdata)
+}
+
+view2=()=>{
+  return this.http.get('http://localhost:3000/forgotpass')
+}
 }

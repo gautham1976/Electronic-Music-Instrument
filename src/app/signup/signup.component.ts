@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MusicService } from '../music.service';
 @Component({
   selector: 'app-signup',
@@ -15,9 +16,23 @@ export class SignupComponent implements OnInit {
     signconfirmpass:""
   }
 
-  constructor(private api:MusicService) { }
+  constructor(private api:MusicService, private router:Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {(() => {
+    'use strict'
+  
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms).forEach(form => {
+      form.addEventListener('submit',function(event:any){
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
   }
   signupdata()
   {
@@ -25,6 +40,8 @@ export class SignupComponent implements OnInit {
 
     })
     alert("success");
+    this.router.navigate(['/login'])
   }
+  
 
 }

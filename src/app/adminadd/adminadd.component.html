@@ -2,15 +2,24 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-10">
-                <form #formnew="ngForm" (ngSubmit)="iadddata()">
+                <form class="row g-3 needs-validation" novalidate #formnew="ngForm" (ngSubmit)="formnew.valid && iadddata()">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <h1 align="center" style="font-family: 'Brush Script MT', cursive; font-size: 60px; color:rgb(255, 255, 255)">Add Instruments</h1>
                <br> <label style="font-size: large;color:rgb(0, 0, 0)" for="" class="form label">&nbsp;<b> NAME: </b></label>
-                <input type="text" class="form-control" [(ngModel)]="dataa.iaddname" name="iname" style="max-width: 500px;"><br>
+                <input type="text" class="form-control" [(ngModel)]="dataa.iaddname" name="iname" style="max-width: 500px;" required>
+                <div class="invalid-feedback">
+                    Please provide a valid Name !
+                  </div><br>
                 <label style="font-size: large;color:rgb(0, 0, 0)"  for="" class="form label">&nbsp;<b> DETAILS: </b></label>
-                <input type="text" class="form-control" [(ngModel)]="dataa.iadddetails" name="idetails" style="max-width: 500px;"><br>
+                <input type="text" class="form-control" [(ngModel)]="dataa.iadddetails" name="idetails" style="max-width: 500px;" required>
+                <div class="invalid-feedback">
+                    Please provide valid Details !
+                  </div><br>
                 <label style="font-size: large;color:rgb(0, 0, 0)" for="" class="form label">&nbsp;<b> REFERENCE: </b></label>
-                <input type="text" class="form-control" [(ngModel)]="dataa.iaddref" name="ireference" style="max-width: 500px;"><br>
+                <input type="text" class="form-control" [(ngModel)]="dataa.iaddref" name="ireference" style="max-width: 500px;" required>
+                <div class="invalid-feedback">
+                    Please provide a valid Reference !
+                  </div><br>
                 <button class="btn btn-primary">ADD INSTRUMENT</button>
                 </div>
                 </form>
