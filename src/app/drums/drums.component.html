@@ -1,1 +1,45 @@
-<p>drums works!</p>
+<nav class="navbar navbar-expand-lg bg-dark" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">
+            <img src="https://i.pinimg.com/564x/50/9d/39/509d3960d83ba32725848e0ecbf175f9.jpg" alt="" width="30" height="24">
+          </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/adminhome"><p style="color:white;">Homepage</p></a>
+          </li>
+          
+        </ul>
+        <a href=""><button class="btn btn-outline-success">Signout</button></a>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <div class="container">
+      <div class="row">
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+              <div class="row g-10">
+                  <form class="row g-3 needs-validation" novalidate #formnew="ngForm" (ngSubmit)="formnew.valid && deldata()">
+                  <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                      <h1 align="center" style="font-family: 'Brush Script MT', cursive; font-size: 60px; color:rgb(255, 255, 255)">Add Instruments</h1>
+                 <br> <label style="font-size: large;color:rgb(0, 0, 0)" for="" class="form label">&nbsp;<b> USERNAME: </b></label>
+                  <input type="text" class="form-control" [(ngModel)]="" name="name" style="max-width: 500px;" required>
+                  <div class="invalid-feedback">
+                      Please provide a valid Username !
+                    </div><br>
+                  <label style="font-size: large;color:rgb(0, 0, 0)"  for="" class="form label">&nbsp;<b> E-MAIL: </b></label>
+                  <input type="email" class="form-control" [(ngModel)]="" name="email" style="max-width: 500px;" required>
+                  <div class="invalid-feedback">
+                      Please provide valid E-mail !
+                    </div><br>
+                  <button class="btn btn-danger">DELETE USER</button>
+                  </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
